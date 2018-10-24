@@ -1,0 +1,24 @@
+<br><br><br><br>  
+<div class="row" *ngIf="product">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="card flex-md-row mb-4 shadow-sm h-md-1000">
+      <div class="card-body d-flex flex-column align-items-start">
+        <h3 class="mb-0">
+          <a class="text-dark" routerLink="product/{{product.id}}">{{product.name}}</a>
+        </h3>
+        <br>
+        <strong class="d-inline-block mb-2 text-primary" style="font-size:25px">${{product.price}}</strong>
+        <p class="card-text mb-auto">{{product.text}}</p>
+        <br>
+        <div class="mb-0 row">
+          <input class="col-md-4" [(ngModel)]="count">
+          <div class="col-md-4"></div>
+          <button class="btn btn-primary col-md-4" (click)="addToCart()">Add to cart</button>
+        </div>
+      </div>
+      <img class="card-img-right flex-auto d-none d-lg-block" src="{{product.imgs[0]}}" width="300" height="400">
+    </div>
+  </div>
+</div>
+

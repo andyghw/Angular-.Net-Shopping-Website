@@ -1,0 +1,15 @@
+<br><br><br />
+<div class="row">
+  <div class="col-lg-2"></div>
+  <h1 class="col-lg-10">Orders</h1>
+</div>
+<div class="row">
+  <div class="col-lg-4"></div>
+  <table class="col-lg-4">
+    <tr class="row"><th class="col-lg-3">OrderId</th><th class="col-lg-3">Status</th><th class="col-lg-3">Date Placed</th><th class="col-lg-3">View Details</th></tr>
+    <tbody *ngFor="let order of orders">
+      <tr class="row"><td class="col-lg-3">{{order.id}}</td><td class="col-lg-3">{{order.status}}</td><td class="col-lg-3">{{order.created_at}}</td><td class="col-lg-3"><a routerLink="/order/{{order.id}}" class="btn btn-primary">Details</a></td></tr>
+    </tbody>
+  </table>
+  <div class="col-lg-4"></div>
+</div>

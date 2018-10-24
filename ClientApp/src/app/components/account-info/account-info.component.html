@@ -1,0 +1,39 @@
+<br /><br /><br />
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Account Info</h4>
+      <form class="needs-validation">
+        <div class="mb-3">
+          <label for="username">Username</label>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Username" name="username" [(ngModel)]="username" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Your username is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" placeholder="you@example.com" name="email" [(ngModel)]="email" readonly>
+          <div class="invalid-feedback">
+            Please enter a valid email address for.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" placeholder="Please enter your new password." name="password" [(ngModel)]="password" required>
+          <div class="invalid-feedback">
+            Please enter your new password.
+          </div>
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-danger btn-lg btn-block" (click)="updateAccountInfo()">Update Your Account</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+

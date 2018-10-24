@@ -1,0 +1,18 @@
+<br><br><br>
+<div *ngFor="let product of products|productFilter:keywords">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+        <div class="card-body d-flex flex-column align-items-start">
+          <h3 class="mb-0">
+            <a class="text-dark" routerLink="/product/{{product.id}}">{{product.name}}</a>
+          </h3>
+          <br>
+          <strong class="d-inline-block mb-2 text-primary">${{product.price}}</strong>
+        </div>
+        <img class="card-img-right flex-auto d-none d-lg-block" src="{{product.imgs[0]}}" width="200" height="300">
+      </div>
+    </div>
+  </div>
+</div>
